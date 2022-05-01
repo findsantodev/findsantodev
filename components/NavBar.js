@@ -21,7 +21,7 @@ export default function NavBar() {
         </div>
         <div className="w-3/12 text-right hidden md:block">
           <Button href={"#contact"} variant="outline-yellow" pill>
-            Call Me
+            Tell Me
           </Button>
         </div>
         <div className="w-9/12 md:hidden text-right">
