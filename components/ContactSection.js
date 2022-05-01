@@ -31,7 +31,7 @@ export default function ContactSection() {
           <div className="md:w-6/12 w-full md:border-r border-primary-gray-200">
             <div className="lg:py-16 lg:px-20 md:p-14 p-5">
               <SectionTitle left>Contact</SectionTitle>
-              <SectionParagraph left>If you have any question don't hesitate to ask me.</SectionParagraph>
+              <SectionParagraph left>If you have any question don&apos;t hesitate to ask me.</SectionParagraph>
               <ItemContact
                 label={"Mail"}
                 icon={"/mail_icon.svg"}

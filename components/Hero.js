@@ -10,11 +10,11 @@ export default function Hero() {
           <div className="text-center xl:mt-20 lg:mt-10 md:mt-6">
             <div className="text-white text-3xl font-semibold font-mono 2xl:w-6/12 xl:w-8/12 lg:w-10/12  mx-auto leading-relaxed">
               <h1 className="">
-                Hello, I'm
+                Hello, I&apos;m
                 <span className="text-yellow-500 hidden md:inline"> Santo Malau.</span>
               </h1>
               <h1 className="text-yellow-500 block md:hidden">Santo Malau.</h1>
-              <h1 className="">I'm a Flutter Developer</h1>
+              <h1 className="">I&apos;m a Flutter Developer</h1>
             </div>
 
             <p className="text-white text-opacity-60 text-lg 2xl:w-3/12 xl:w-4/12 lg:w-6/12 mx-auto mt-6 leading-relaxed">

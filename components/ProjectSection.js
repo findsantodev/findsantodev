@@ -8,7 +8,7 @@ export default function ProjectSection() {
       <section className="py-28" id="project">
         <div className="container mx-auto px-10 2xl:px-0">
           <SectionTitle>Projects</SectionTitle>
-          <SectionParagraph>Some of the applications I've ever made.</SectionParagraph>
+          <SectionParagraph>Some of the applications I&apos;ve ever made.</SectionParagraph>
           <div className="flex -mx-4 mt-20 flex-wrap">
             <ItemProject
               image={"/project_imeet.png"}

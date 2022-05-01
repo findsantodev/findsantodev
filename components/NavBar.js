@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 import Button from "./Button";
 import classNames from "classnames";
+import Image from "next/image";
 
 export default function NavBar() {
   const [offCanvas, setOffCanvas] = useState(false);
@@ -24,18 +25,34 @@ export default function NavBar() {
           </Button>
         </div>
         <div className="w-9/12 md:hidden text-right">
-          <img src="/menu_icon.svg" alt="" className="inline-block" onClick={() => setOffCanvas(true)} />
+          <Image
+            src="/menu_icon.svg"
+            alt=""
+            className="inline-block"
+            onClick={() => setOffCanvas(true)}
+            width={30}
+            height={30}
+          />
         </div>
       </div>
 
       <div
         className={classNames(
-          "flex fixed bg-white z-10 top-0 h-full w-full p-10 md:hidden transition-all",
+          "fixed bg-white z-10 top-0 h-full w-full p-10 md:hidden transition-all",
           offCanvas ? "right-0" : "-right-full"
         )}
       >
-        <img src="/x_icon.svg" alt="" className="absolute top-8 right-8 w-10" onClick={setCanvasOff} />
-        <Nav direction="vertical" setOffCanvas={setCanvasOff} />
+        <div className="flex justify-between items-start">
+          <Nav direction="vertical" setOffCanvas={setCanvasOff} />
+          <Image
+            src="/x_icon.svg"
+            alt=""
+            className="absolute top-8 right-8 w-10"
+            onClick={setCanvasOff}
+            width={35}
+            height={35}
+          />
+        </div>
       </div>
     </>
   );
