@@ -12,6 +12,7 @@ export default function SkillSection() {
             <ItemSkill icon={"/bloc.png"} title={"BLoC"} description={"Expert"} />
             <ItemSkill icon={"/cubit.png"} title={"Cubit"} description={"Expert"} />
             <ItemSkill icon={"/getx.png"} title={"GetX"} description={"Intermediate"} />
+            <ItemSkill icon={"/mobx.png"} title={"MobX"} description={"Expert"} />
           </div>
         </div>
       </section>

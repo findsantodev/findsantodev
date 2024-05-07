@@ -24,6 +24,20 @@ export default function ProjectSection() {
                 "Mountaineering is one of the most dangerous natural activities, therefore HiMount is here to provide the necessary information such as mountain data, mountaineering tips and others. You can also communicate with friends so that you can schedule a hike together."
               }
             />
+            <ItemProject
+              image={"/project_ekuid.png"}
+              title={"Ekuid"}
+              description={
+                "Ekuid is a securities crowdfunding platform to invest in impactful & life changing projects in society. Licensed by OJK."
+              }
+            />
+            {/* <ItemProject
+              image={"/project_himount.png"}
+              title={""}
+              description={
+                "Mountaineering is one of the most dangerous natural activities, therefore HiMount is here to provide the necessary information such as mountain data, mountaineering tips and others. You can also communicate with friends so that you can schedule a hike together."
+              }
+            /> */}
           </div>
         </div>
       </section>
