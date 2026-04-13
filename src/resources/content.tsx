@@ -1,21 +1,32 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  firstName: "Santo",
+  lastName: "Malau",
+  name: `Santo Malau`,
+  role: "Software Engineer",
+  avatar: "/images/avatar.png",
+  email: "santomalau3@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Indonesia"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: (
+    <>Thoughts on Flutter, mobile engineering, and building products.</>
+  ),
 };
 
 const social: Social = [
@@ -25,25 +36,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/santomalau",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/santomalau/",
     essential: true,
   },
   {
@@ -60,24 +59,29 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Shipping mobile apps that people actually use</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Wukong</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/wukong",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm Santo, a remote software engineer based in{" "}
+      <Text as="span" size="xl" weight="strong">
+        Indonesia
+      </Text>
+      , crafting intuitive user experiences and <br /> building scalable digital
+      products.
+    </>
   ),
 };
 
@@ -94,7 +98,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,9 +106,18 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <Text>
+          I'm Santo Malau — a developer from Indonesia who builds things
+          end-to-end. My roots are in Flutter, where I've shipped mobile apps
+          across industries: guest management, outdoor adventure, and impact
+          investing. Now I'm pushing into full-stack territory with Next.js and
+          Go, and I use AI tools like Claude and Gemini to keep shipping fast
+          without cutting corners.
+        </Text>
+        <Text>
+          I write code that scales. I collaborate with dynamic teams to build
+          impactful products, and I genuinely enjoy the craft.
+        </Text>
       </>
     ),
   },
@@ -113,41 +126,99 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Wukong",
+        timeframe: "Jun 2024 - Dec 2025",
+        role: "Full Stack Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Architected and developed the main platform (
+            <a
+              href="https://wukong.co.id"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "underline" }}
+            >
+              wukong.co.id
+            </a>
+            ) from the ground up using <strong>Next.js</strong> for the frontend
+            and <strong>Golang</strong> for the backend.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed a scalable system architecture, optimizing both application
+            performance and seamless data flow.
+          </>,
+          <>
+            Established solid engineering foundations including API structures,
+            state management, and deployment pipelines.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Ekuid",
+        timeframe: "Dec 2021 - Dec 2025",
+        role: "Mobile Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed the official mobile app for{" "}
+            <a
+              href="https://eku.id"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "underline" }}
+            >
+              eku.id
+            </a>{" "}
+            from scratch using Flutter and Graphql.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Designed and conceptualized app architecture with Clean
+            Architecture.
+          </>,
+          <>
+            Managed app distribution using Codemagic to App Store and Google
+            Play.
+          </>,
+          <>
+            Defined and updated project management flow using Notion and set up
+            offline mode application.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "SanZos TechIn",
+        timeframe: "Apr 2020 - Feb 2021",
+        role: "Software Developer",
+        achievements: [
+          <>
+            Designed and developed 2 products: IMeet and SSBI using Flutter and
+            Laravel.
+          </>,
+          <>Managed team of software engineers and UI/UX engineers.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "FK Unpad Lecturer Research Team",
+        timeframe: "Aug 2019 - Jan 2020",
+        role: "Frontend Web Developer",
+        achievements: [
+          <>
+            Designed and developed website to manage patients data using
+            Laravel.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Atourin",
+        timeframe: "Jan 2019 - Feb 2019",
+        role: "Backend Developer Intern",
+        achievements: [
+          <>
+            Designed and created data structure of destination for itinerary
+            using Node.js (MySQL, Google Maps API and Map Box API).
           </>,
         ],
         images: [],
@@ -159,12 +230,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "University of Padjadjaran",
+        description: <>Bachelor of Informatic Engineering.</>,
       },
     ],
   },
@@ -173,60 +240,52 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Flutter & Mobile",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Proven track record of application launches on app stores, with a
+            strong focus on Flutter and clean architecture.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Flutter", icon: "terminal" },
+          { name: "Dart", icon: "terminal" },
+          { name: "Codemagic", icon: "terminal" },
+          { name: "Firebase", icon: "terminal" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Web & Backend",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Experienced in developing backend services, APIs, and informative
+            web dashboards.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Laravel", icon: "terminal" },
+          { name: "PHP", icon: "terminal" },
+          { name: "Node.js", icon: "terminal" },
+          { name: "GraphQL", icon: "terminal" },
+          { name: "REST API", icon: "terminal" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Management & Design",
+        description: (
+          <>
+            Management of project workflows, team communication, and application
+            design.
+          </>
+        ),
+        tags: [
+          { name: "Project Management", icon: "terminal" },
+          { name: "Figma", icon: "terminal" },
+          { name: "Notion", icon: "terminal" },
         ],
+        images: [],
       },
     ],
   },
@@ -235,7 +294,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
